@@ -1,5 +1,7 @@
 # React theming using styled-components and Context API
 
+Live demo 👉 [Click here](https://modest-ramanujan-73265f.netlify.app/)
+
 ![](./theme.gif)
 
 ### Multiple theme support
@@ -31,7 +33,7 @@ const themes: IThemes = {
 };
 ```
 
-You can extend theme structure according to your requirements
+> You can extend theme structure according to your requirements.
 
 ### Easy to use Theme Provider
 
@@ -52,7 +54,7 @@ export const DEFAULT_THEME: IThemesNames = "kabutar";
  * @returns
  */
 export default function ThemeProvider(props: IThemeProviderProps) {
-  const [themeName, setTheme] = useState < IThemesNames > DEFAULT_THEME;
+  const [themeName, setTheme] = useState <IThemesNames>(DEFAULT_THEME);
   return (
     <StyledComponentThemeProvider theme={themes[themeName]}>
       <ThemeSwitcher.Provider value={{ setTheme }}>
